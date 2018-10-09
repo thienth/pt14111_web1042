@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="text" name="uname" oninput="content = this.value">
+	<button onclick="changeContent()">Click me</button>
+	<p>h2 - v1</p>
+	<h2 id="target" onclick="increaseCount()" user="thien">0</h2>
+
+
+	<script type="text/javascript">
+		var content = "";
+		var h2 = document.querySelector('#target');
+		function changeContent(){
+			h2.innerText = content;
+		}
+		
+	</script>
+</body>
+</html>

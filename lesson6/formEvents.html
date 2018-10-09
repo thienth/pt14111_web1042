@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<input type="text" name="" 
+		onfocus="console.log('Xay ra su kien focus')" 
+		onblur="console.log('Xay ra su kien blur')" 
+		onchange="console.log('xay ra su kien onchange')" 
+		onkeyup="console.log(this.value)" 
+	>
+
+	<select onchange="console.log('xay ra su kien onchange cua the select')">
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5">5</option>
+		<option value="6">6</option>
+	</select>
+	<div style="width: 100px; height: 100px; background: #ccc;"
+		onmouseover="count++; console.log(`mouseover ${count}`)" 
+		onmousemove="count++; console.log(`mousemove ${count}`)" 
+	></div>
+	<script type="text/javascript">
+		var count = 0;
+	</script>
+</body>
+</html>

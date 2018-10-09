@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="text" name="uname" test="something">
+	<button onclick="changeContent()">Click me</button>
+	<img src="" width="500">
+
+	<script type="text/javascript">
+		var imgArr = [
+			'http://sohanews.sohacdn.com/thumb_w/660/2016/cute-funny-animal-photos-10-1452049141655-51-0-393-670-crop-1452049246623.jpg',
+			'https://kenh14cdn.com/2017/extra-large-1489164807-cover-image-1489252556793.jpg',
+			'http://file.vforum.vn/hinh/2017/12/ta-con-cho.jpg'
+
+		];
+
+		var index = 0;
+		var img = document.querySelector('img');
+
+		img.src = imgArr[index];
+
+		setInterval(function(){
+			if(index >= 2){
+				index = 0;
+			}else{
+				index++;
+			}
+			img.src= imgArr[index];
+
+		}, 2000)
+
+
+
+		var content = "";
+		function changeContent(){
+			document.querySelector('img').src = content;
+		}
+
+		setTimeout(function(){
+			document.querySelector('input[name="uname"]').value = "FPT polytechnic";
+		}, 3000);
+	</script>
+</body>
+</html>

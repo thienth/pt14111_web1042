@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<h2>Lorem ipsum dolor sit amet, </h2>
+	<h2>Lorem ipsum dolor sit amet, </h2>
+	<h2>Lorem ipsum dolor sit amet, </h2>
+	<h2>Lorem ipsum dolor sit amet, </h2>
+	<h2>Lorem ipsum dolor sit amet, </h2>
+	<h2>Lorem ipsum dolor sit amet, </h2>
+	<h2>Lorem ipsum dolor sit amet, </h2>
+	<h2>Lorem ipsum dolor sit amet, </h2>
+	<h2>Lorem ipsum dolor sit amet, </h2>
+	<h2>Lorem ipsum dolor sit amet, </h2>
+	<h2>Lorem ipsum dolor sit amet, </h2>
+	<h2>Lorem ipsum dolor sit amet, </h2>
+	<h2>Lorem ipsum dolor sit amet, </h2>
+	<h2>Lorem ipsum dolor sit amet, </h2>
+	<h2>Lorem ipsum dolor sit amet, </h2>
+	<h2>Lorem ipsum dolor sit amet, </h2>
+	<h2>Lorem ipsum dolor sit amet, </h2>
+
+	<script type="text/javascript">
+		var h2List = document.querySelectorAll('h2');
+		for (var i = 0; i < h2List.length; i++) {
+			h2List[i].onmouseover = function(){
+				this.style.background = 'green';
+				this.style.color = 'white';
+			}
+			h2List[i].onmouseout = function(){
+				this.style.background = 'white';
+				this.style.color = 'black';
+			}
+		}
+	</script>
+</body>
+</html>

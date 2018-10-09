@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	var str = prompt("Nhap chuoi");
+	var result = "";
+	var count = 0;
+	for (var i = 0; i < str.length; i++) {
+		if(str[i] == " "){
+			result += " ";
+			continue;
+		}
+		if(count%2==0){
+			result += str[i].toUpperCase();
+		}else{
+			result += str[i].toLowerCase();
+		}
+		count++;
+	}
+
+	console.log(result);
+</script>
+</body>
+</html>

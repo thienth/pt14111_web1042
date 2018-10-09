@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.maytinh{
+			width: 300px;
+			background: #ccc;
+			min-height: 270px;
+			text-align: right;
+    		padding-right: 10px;
+		}
+		#ketqua{
+			height: 40px;
+			border: 1px solid #000;
+		}
+		.maytinh button{
+			display: inline-block;
+			width: 24%;
+			height: 40px;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="maytinh">
+		<h2 id="ketqua"></h2>
+		<button onclick="getValue(this)" value="AC">AC</button>
+		<button onclick="getValue(this)" value="+-">+/-</button>
+		<button onclick="getValue(this)" value="/100">%</button>
+		<button onclick="getValue(this)" value="/">/</button>
+		<button onclick="getValue(this)" value="7">7</button>
+		<button onclick="getValue(this)" value="8">8</button>
+		<button onclick="getValue(this)" value="9">9</button>
+		<button onclick="getValue(this)" value="*">*</button>
+		<button>4</button>
+		<button>5</button>
+		<button>6</button>
+		<button>-</button>
+		<button>1</button>
+		<button>2</button>
+		<button>3</button>
+		<button>+</button>
+		<button style="width: 49%;">0</button>
+		<button>.</button>
+		<button onclick="tinhKetQua()">=</button>
+	</div>
+	<script type="text/javascript">
+		var kq = document.querySelector('#ketqua');
+		var phepToan = '';
+		function getValue(element){
+
+			phepToan+=element.value;
+		}
+
+		function tinhKetQua(){
+			debugger;
+			ketqua.innerText = eval(phepToan);
+
+		}
+	</script>
+</body>
+</html>

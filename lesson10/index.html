@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#list_product{
+			height: 400px; 
+			overflow-y: scroll; 
+			display: inline-block; 
+			width: 50%; 
+			border: 1px solid #ccc
+		}
+
+		.bg-green{
+			background: green;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+
+	<h2 class="bg-green">Lorem ipsum dolor sit amet 1</h2>
+	<h2>Lorem ipsum dolor sit amet 2</h2>
+	<h2>Lorem ipsum dolor sit amet 3</h2>
+	<h2>Lorem ipsum dolor sit amet 4</h2>
+	<h2>Lorem ipsum dolor sit amet 5</h2>
+	<h2>Lorem ipsum dolor sit amet 6</h2>
+	<div id="list_product">
+		
+
+	</div>
+
+
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript">
+		// document.querySelector('h2').innerText = "say something";
+		$('h2').mouseover(function(){
+			$(this).addClass('bg-green');
+		});
+
+		$('h2').mouseout(function(){
+			$(this).removeClass('bg-green');
+		});
+
+		$('h2').click(function(){
+			$(this).remove();
+		});
+
+		var products = [
+			{
+				mssp: 1,
+				tensp: 'Bánh mỳ',
+				giasp: 50000,
+				anhsp: 'banh-my.jpg'
+			},
+			{
+				mssp: 2,
+				tensp: 'Kẹo mút',
+				giasp: 4000,
+				anhsp: 'keo-mut.jpg'
+			},
+			{
+				mssp: 3,
+				tensp: 'Kẹo kéo',
+				giasp: 8000,
+				anhsp: 'keo-keo.jpg'
+			},
+		];
+		var htmlDsSp = ``;
+		for (var i = 0; i < products.length; i++) {
+			htmlDsSp += `<div>
+							<img width="150" src="${products[i].anhsp}">
+							<h3>${products[i].tensp}</h3>
+							<strong>Giá : ${products[i].giasp}</strong>
+							<button>Mua</button>
+						</div>`;
+		}
+
+		$('#list_product').html(htmlDsSp);
+		$('#list_product').dblclick(function(){
+			$(this).empty();
+		});
+	</script>
+</body>
+</html>

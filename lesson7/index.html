@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<input type="text" onkeydown="gotoPage(event)" oninput="url = this.value">
+
+	<script type="text/javascript">
+		var url = "";
+
+		function gotoPage(event){
+			if(event.keyCode == 13){
+				window.location.href = `http://${url}`;
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.text-red{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+
+
+	<h2>Form dang ky tai khoan</h2>
+	<div>
+		<label>Tai khoan</label>
+		<input type="text" name="username">
+		<br>
+		<span id="usernameErr" class="text-red"></span>
+	</div>
+	<div>
+		<label>Email</label>
+		<input type="email" name="email">
+		<span class="text-red" id="emailErrContent"></span>
+	</div>
+	<div>
+		<label>Mat khau</label>
+		<input type="password" name="password">
+	</div>
+	<div>
+		<label>Xac nhan mat khau</label>
+		<input type="password" name="cfpassword">
+	</div>
+	<div>
+		<label>Gioi tinh</label>
+		<input type="radio" name="gender" value="1"> Nam
+		<input type="radio" name="gender" value="2"> Nu
+		<input type="radio" name="gender" value="3"> Khac
+	</div>
+	<div>
+		<label>Anh dai dien</label>
+		<input type="file" name="avatar">
+	</div>
+	<div>
+		<button type="button" id="submit">Tao tai khoan</button>
+	</div>
+
+	<script type="text/javascript">
+		var btn = document.querySelector('#submit');
+		btn.onclick = function(){
+			// xac dinh the tai khoan/username
+			var username = document.querySelector(`[name="username"]`).value.trim();
+			var usernameErrContent = "";
+
+			if(username.length < 4 || username.length >20){
+				usernameErrContent = "Tai khoan nam trong khoang 4-20 ky tu";
+			}
+
+			if(username == ""){
+				usernameErrContent = "Vui long nhap tai khoan";
+			}
+			document.querySelector('#usernameErr').innerText = usernameErrContent;
+
+
+			var email = document.querySelector(`[name="email"]`).value.trim();
+			var emailErrContent = "";
+
+			if(checkEmailFormat(email) == false){
+				emailErrContent = "Email khong dung dinh dang";
+			}
+
+			if(email == ""){
+				emailErrContent = "Vui long nhap tai khoan";
+			}
+
+			document.querySelector('#emailErrContent').innerText = emailErrContent;
+
+		}
+
+		function checkEmailFormat(str){
+			if(str[0] == "@" || str[str.length-1] == "@"){
+				return false;
+			}
+
+			var count = 0;
+			for (var i = 0; i < str.length; i++) {
+				if(str[i] == "@"){
+					count++;
+				}
+			}
+
+			if(count != 1){
+				return false;
+			}
+
+			return true;
+		}
+	</script>
+
+</body>
+</html>

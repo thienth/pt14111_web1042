@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	viet ham getRandomArray(elementAmount)
+	tinh tong 2 phan tu la lon nhat trong mang
+	<script type="text/javascript">
+		// var arr = [
+		// 	1,2,3,4, true, false, [5,6,7], {name: 'thienth', age: 27}
+		// ];
+		// console.log(arr);
+		
+
+		function getRandomArray(elementAmount){
+			
+			var arr = [];
+			while (arr.length < elementAmount) {
+				var ran = Math.round(Math.random()*100);
+				arr.push(ran);
+			}
+
+			return arr;
+		}
+
+		function sortNumber(a, b)
+		{
+		  return a - b;
+		}
+		
+		var x1 = getRandomArray(10);
+		var x2 = x1.sort(sortNumber);
+		console.log(x2);
+		console.log(`Tổng 2 số lớn nhất trong mảng là : ${x2[x2.length-2]} + ${x2[x2.length-1]} = ${x2[x2.length-2] + x2[x2.length-1]}`);
+
+	</script>
+</body>
+</html>

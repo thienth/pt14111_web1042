@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<div style="width: 100px; height: 100px; background: #ccc;"
+		onmouseover="countMouseOver(this)" 
+		onmouseout="backToOrigin(this)" 
+	></div>
+
+	<br>
+
+	<img src="akdsjfhadskfsadkfjha.jpg" width="400" alt="anh demo"
+		onerror="fixErrorImage(this)" 
+	>
+	<br>
+	<img src="https://thuthuattienich.com/wp-content/uploads/2017/06/anh-dai-dien-facebook-cho-meo-de-thuong-27.jpg" width="400" alt="anh demo"
+		onerror="console.log(this)" 
+	>
+
+	<script type="text/javascript">
+		var count = 0;
+		function countMouseOver(element){
+			console.log(element);
+			element.style.background = 'green';
+			count++;
+			console.log(count);
+		}
+
+		function backToOrigin(element){
+			element.style.background = '#ccc';
+		}
+
+		function fixErrorImage(element){
+			element.src = 'https://www.coastalliving.com/img/icons/missing-image-16x9.svg';
+		}
+	</script>
+</body>
+</html>

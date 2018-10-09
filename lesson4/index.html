@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+</head>
+<body>
+
+	<input type="text" id="soA">
+	<input type="text" id="soB">
+	<input type="text" id="soC">
+	<button onclick="timMax()">Tìm số lớn nhất</button>
+	<h2 id="ketqua"></h2>
+	<script type="text/javascript">
+		function timMax(){
+			var theInputA = document.querySelector('#soA');
+			var theInputB = document.querySelector('#soB');
+			var theInputC = document.querySelector('#soC');
+			var theKetqua = document.querySelector('#ketqua');
+			var max = Number(theInputA.value);
+
+			if(max < Number(theInputB.value)){
+				max = Number(theInputB.value);
+			}
+
+			if(max < Number(theInputC.value)){
+				max = Number(theInputC.value)
+			}
+
+			theKetqua.innerText = `Số lớn nhất trong 3 số trên là: ${max}`;
+
+		}
+	</script>
+
+</body>
+</html>

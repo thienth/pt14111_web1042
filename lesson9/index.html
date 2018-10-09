@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<img src="https://i.ytimg.com/vi/Fbk8dgbg9Wk/maxresdefault.jpg" width="500">
+	<script type="text/javascript">
+		var img = document.querySelector('img');
+
+		var imgUrl1 = 'https://i.ytimg.com/vi/Fbk8dgbg9Wk/maxresdefault.jpg';
+		var imgUrl2 = 'http://www.dkn.tv/wp-content/uploads/2016/05/Nhung-chu-cho-dang-yeu-1.jpg';
+
+		img.onmouseover = function(){
+			this.src = imgUrl2;
+		}
+
+		img.onmouseout = function(){
+			this.src = imgUrl1;
+		}
+
+
+	</script>
+</body>
+</html>
